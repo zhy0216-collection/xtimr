@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e016cce-47e4-4f0f-bc99-73f96ddd6bd2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chrome-extension/resources/style.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chrome-extension/.bg.js.swp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chrome-extension/.manifest.json.swp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chrome-extension/.view.html.swp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/manifest.json" afterPath="$PROJECT_DIR$/chrome-extension/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/chrome-extension/resources/style.css" afterPath="$PROJECT_DIR$/chrome-extension/resources/pure.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/bg.js" afterPath="$PROJECT_DIR$/chrome-extension/bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" afterPath="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/view.html" afterPath="$PROJECT_DIR$/chrome-extension/view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xtimr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,22 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bg.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chrome-extension/bg.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="view.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="25" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.5072" vertical-offset="519" max-vertical-offset="1210">
-              <folding>
-                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
+            <state line="13" column="51" selection-start="433" selection-end="485" vertical-scroll-proportion="0.4576" vertical-offset="0" max-vertical-offset="2420">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,16 +42,25 @@
       <file leaf-file-name="rootCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="4" selection-start="234" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
+            <state line="37" column="17" selection-start="957" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1386">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.css">
+      <file leaf-file-name="style.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="237" column="1" selection-start="147" selection-end="4033" vertical-scroll-proportion="0.0" vertical-offset="4693" max-vertical-offset="5346">
+            <state line="3" column="21" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pure.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-extension/resources/pure.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="134" column="21" selection-start="2287" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="2625" max-vertical-offset="5346">
               <folding />
             </state>
           </provider>
@@ -82,16 +79,19 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/chrome-extension/manifest.json" />
+        <option value="$PROJECT_DIR$/chrome-extension/lib/angular.min.js" />
+        <option value="$PROJECT_DIR$/chrome-extension/bg.js" />
         <option value="$PROJECT_DIR$/chrome-extension/resources/style.css" />
         <option value="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
+        <option value="$PROJECT_DIR$/chrome-extension/resources/style.scss" />
+        <option value="$PROJECT_DIR$/chrome-extension/lib/pure.min.css" />
         <option value="$PROJECT_DIR$/chrome-extension/view.html" />
-        <option value="$PROJECT_DIR$/chrome-extension/manifest.json" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-33" />
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="774" />
@@ -186,6 +186,46 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style.scss" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtimr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtimr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chrome-extension" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtimr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtimr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chrome-extension" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -225,7 +265,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-33" y="22" width="1280" height="774" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -266,13 +306,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chrome-extension/bg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="28" selection-start="239" selection-end="299" vertical-scroll-proportion="0.3872" vertical-offset="0" max-vertical-offset="625">
@@ -280,26 +313,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.css">
+    <entry file="file://$PROJECT_DIR$/chrome-extension/lib/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="1" selection-start="147" selection-end="4033" vertical-scroll-proportion="0.0" vertical-offset="4693" max-vertical-offset="5346">
+        <state line="6" column="32" selection-start="591" selection-end="1102" vertical-scroll-proportion="0.33690658" vertical-offset="0" max-vertical-offset="20108">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/bg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="0" selection-end="111" vertical-scroll-proportion="0.067381315" vertical-offset="0" max-vertical-offset="653">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="234" selection-end="239" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="550">
+        <state line="37" column="17" selection-start="957" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="1386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/lib/pure.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="18682" selection-start="18943" selection-end="18943" vertical-scroll-proportion="6.839204" vertical-offset="0" max-vertical-offset="4598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="21" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/pure.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="21" selection-start="2287" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="2625" max-vertical-offset="5346">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="25" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.5072" vertical-offset="519" max-vertical-offset="1210">
-          <folding>
-            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="13" column="51" selection-start="433" selection-end="485" vertical-scroll-proportion="0.4576" vertical-offset="0" max-vertical-offset="2420">
+          <folding />
         </state>
       </provider>
     </entry>

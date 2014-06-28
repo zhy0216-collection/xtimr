@@ -1,0 +1,19 @@
+$theme-blue: #1f8dd6;
+
+.color-blue {
+  color: $theme-blue;
+}
+.header, .content {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.progress {
+  width: 300px;
+  height: 20px;
+}
+.current-progress {
+  height: 100%;
+  background: $theme-blue;
+  border-radius: 5px;
+}
