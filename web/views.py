@@ -2,13 +2,67 @@
 import datetime
 
 from django.shortcuts import render
+
+import datetime
+import ujson
+
+
 from django.http import HttpResponse, Http404
 from django.views.decorators.http import require_http_methods
-import ujson
+
 ### local module
 
 from web.models import WebUrl, Domain, UrlTime
 from web.utils import parse_domain
+
+
+
+# Create your views here.
+def get_browser_datetime():
+    now = datetime.datetime.today()
+    begin_time = datetime.date.today()
+    end_time = begin_time + datetime.timedelta(1)
+    urltimes = UrlTime.objects.filter(end_time__lte=endtime, end_time__bte=begin_time)
+    urltimes_uniq = _urltimes_uniq(urltimes)
+    domain_list = _map_domain(urltimes_uniq)
+    label_list =  _map_label(domain_list)
+    return ujson.dump(label_list)
+
+
+def _map_label(domain_list):
+    label_dict ={}
+    for _ in domain_list:
+        try:
+            labels_of_domain = WebUrlLabel.objects.filter(domain__strartswith=_.name)
+            domain_item_list =  label_dict[_]
+            domain_item_list.append(_)
+        catch KeyError:
+            domain_item_list =[]
+            domain_item_list.append(_)
+            d[_.label] = domain_ite_list
+
+def _map_domain(urltimes):
+    domain_dict = {}
+    for _ in urltimes:
+        try:
+            url_list = domain_dict[_.domain]
+            url_list.append(_)
+        catch KeyError:
+            url_list = []
+            url_list.appent(_)
+            d[_.domain] = url_list
+    return domain_dict
+
+def _urltimes_uniq(urltimes):
+    d = {}
+    for url_time in urltimes:
+        try:
+            item = d[url_time.web_url]
+            item.seconds += url_time.seconds
+        catch KeyError:
+            d[url_time.web_url] = url_time
+     return d
+
 
 def fake_get_user_type(request):
     response_data = {}
