@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="resources/style.css" />
 
   <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="lib/d3.js"></script>
+  <script type="text/javascript" src="lib/d3.layout.cloud.js"></script>
   <!--<link rel="dns-prefetch" href="//hitour.qiniudn.com/">-->
 </head>
 <body ng-app="XtimrApp" ng-controller="rootCtrl" ng-csp>
@@ -59,12 +61,7 @@
       <div class="content">
         <h2 class="content-subhead">你喜欢的访问内容</h2>
 
-        <div class="pure-g" ng-repeat="record in data.analysis.label">
-          <div class="pure-u-1-6" ng-bind="record.name"></div>
-          <div class="pure-u-2-6 progress">
-            <div class="current-progress" ng-style="{ 'width': record.percent + '%' }"></div>
-          </div>
-        </div>
+        <div id="word-map"></div>
       </div>
     </div>
     <!--<div id="main" ng-show="local.current_tab == 'overview'">
