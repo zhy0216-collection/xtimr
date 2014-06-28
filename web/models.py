@@ -12,7 +12,7 @@ class WebUrl(models.Model):
 
 class Domain(models.Model):
     name         = models.CharField(max_length=64)
-    title        = models.CharField(max_length=64, default='')
+    title        = models.CharField(max_length=64, default="")
     label        = models.ForeignKey("WebUrlLabel", default=1)
 
 
@@ -34,7 +34,7 @@ class UrlTime(models.Model):
 
 class WebUrlLabel(models.Model):
     name            = models.CharField(max_length=32)
-    
+
     # category        = models.ForeignKey("WebLabelCategory", null=True)
 
 

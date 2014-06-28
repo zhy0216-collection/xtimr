@@ -19,6 +19,10 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
       {
         key   : 'analysis',
         label : '分析'
+      },
+      {
+        key   : 'label-manager',
+        label : '标签管理'
       }
     ],
     current_pie : '',
@@ -26,14 +30,14 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
   };
 
   $scope.init = function() {
-    /*
+    
      var a_analysis = $http.get( request_url.getUserAnalysis );
      var a_browse = $http.get( request_url.getBrowseInfo );
 
      $q.all( [a_analysis, a_browse] ).then( function( values ) {
      $scope.data.analysis = values[0].data;
      $scope.data.browse = values[1].data;
-     } );*/
+     } );
     $scope.data.analysis = {
       "type"  : "\u65b0\u95fb\u8fbe\u4eba",
       "label" : [
@@ -48,39 +52,7 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
         {"percent" : 90, "name" : "rock you"},
       ]
     };
-    $scope.data.browse = {
-      "total_time" : 100,
-      "data"       : [
-        {
-          "seconds" : 30,
-          "type" : "\u65b0\u95fb",
-          "details": [
-            {
-              "name": '网易',
-              "seconds": '10'
-            },
-            {
-              "name": '凤凰',
-              "seconds": '20'
-            }
-          ]
-        },
-        {
-          "seconds" : 50,
-          "type" : "\u5a31\u4e50",
-          "details": [
-            {
-              "name": '意识到',
-              "seconds": '40'
-            },
-            {
-              "name": '意识到',
-              "seconds": '10'
-            }
-          ]
-        }
-      ]
-    };
+    
 
     $scope.initMap( $scope.data.analysis.label );
   };

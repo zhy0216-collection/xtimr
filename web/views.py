@@ -42,10 +42,13 @@ def get_browse_datetime(request):
         d = {"type": label.name}
         seconds = sum([domain_sum[_] for _ in label_sum[label]]) / 1000
         d["seconds"] = seconds 
-        d["details"] = [{"name": domain.title,
+        d["details"] = [{"name": domain.title or domain.name,
                          "seconds": domain_sum[domain] / 1000} for domain in label_sum[label]]
+        result.append(d)
 
-    return HttpResponse(ujson.dumps(result), content_type="application/json")
+    data = {"data":result, "total_time": sum([_["seconds"] for _ in result])}
+
+    return HttpResponse(ujson.dumps(data), content_type="application/json")
  
 
 # change me
