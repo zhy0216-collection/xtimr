@@ -20,10 +20,11 @@ from web.utils import parse_domain
 
 # Create your views here.
 def get_browse_datetime(request):
+    userid = request.META.get("HTTP_X_UDID")
     now = datetime.datetime.today()
     begin_time = datetime.date.today()
     end_time = begin_time + datetime.timedelta(days=1)
-    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=begin_time)
+    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=begin_time, userid=userid)
     # print "urltimes:%s"%urltimes
     url_times_list = [(_.domain, _.milli_seconds) for _ in urltimes]
 

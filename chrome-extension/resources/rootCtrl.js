@@ -31,8 +31,8 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
 
   $scope.init = function() {
     
-     var a_analysis = $http.get( request_url.getUserAnalysis );
-     var a_browse = $http.get( request_url.getBrowseInfo );
+     var a_analysis = $http.get( request_url.getUserAnalysis, {headers: {'X-UDID':localStorage.uuid}});
+     var a_browse = $http.get( request_url.getBrowseInfo, {headers: {'X-UDID':localStorage.uuid}});
 
      $q.all( [a_analysis, a_browse] ).then( function( values ) {
      $scope.data.analysis = values[0].data;
