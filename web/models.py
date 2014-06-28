@@ -15,6 +15,13 @@ class Domain(models.Model):
     title        = models.CharField(max_length=64, default="")
     label        = models.ForeignKey("WebUrlLabel", default=1)
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "title": self.title,
+        }
+
 
     def __unicode__(self):
         return self.name
@@ -37,6 +44,11 @@ class WebUrlLabel(models.Model):
 
     # category        = models.ForeignKey("WebLabelCategory", null=True)
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name
+        }
 
 class UserLabel(models.Model):
     name            = models.CharField(max_length=32)

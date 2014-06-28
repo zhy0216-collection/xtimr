@@ -131,6 +131,16 @@ def label_manage(request):
         domain_list = Domain.objects.filter(id__in=domain_id_list, label_id=1)
         label_list =[_.label for _ in domain_list]
 
+        result = {
+            "labels": [_.to_dict() for _ in label_list],
+            "domains": [_.to_dict() for _ in domain_list],
+            "success":True,
+        }
+
+        return HttpResponse(ujson.dumps(result), 
+                        content_type="application/json"
+                    )
+
     elif request.method == "POST":
         pass
 
@@ -138,8 +148,13 @@ def label_manage(request):
 @require_http_methods(["POST"])
 def create_label(request):
     name = request.POST.get("name")
-    WebUrlLabel.get_or_create(name=name)
-    return HttpResponse(ujson.dumps({"success":True}), 
+    label = WebUrlLabel.get_or_create(name=name)
+    result = {
+        "success":True, 
+        "label_id":label.id
+    }
+
+    return HttpResponse(ujson.dumps(result), 
                         content_type="application/json"
                     )
 
