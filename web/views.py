@@ -13,7 +13,7 @@ from django.views.decorators.http import require_http_methods
 
 ### local module
 
-from web.models import WebUrl, Domain, UrlTime
+from web.models import WebUrl, Domain, UrlTime, WebUrlLabel
 from web.utils import parse_domain
 
 
@@ -126,5 +126,20 @@ def readability(request):
 @require_http_methods(["GET", "POST"])
 def label_manage(request):
     if request.method == "GET":
-        return render()
+        userid = request.META.get("HTTP_X_UDID")
+        domain_id_list = [_["domain_id"] for _ in UrlTime.objects.filter(userid=userid).distinct("domain_id").values("domain_id")]
+        domain_list = Domain.objects.filter(id__in=domain_id_list, label_id=1)
+        label_list =[_.label for _ in domain_list]
+
+    elif request.method == "POST":
+        pass
+
+
+@require_http_methods(["POST"])
+def create_label(request):
+    name = request.POST.get("name")
+    WebUrlLabel.get_or_create(name=name)
+    return HttpResponse(ujson.dumps({"success":True}), 
+                        content_type="application/json"
+                    )
 
