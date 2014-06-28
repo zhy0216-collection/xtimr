@@ -14,12 +14,8 @@ class Domain(models.Model):
 class UrlTime(models.Model):
     userid          = models.IntegerField()
     start_time      = models.DateTimeField()
-<<<<<<< HEAD
-    seconds         = models .IntegerField()
-=======
     milli_seconds   = models.IntegerField()
     end_time        = models.DateTimeField()
->>>>>>> 6dc97a5b8d6ca5754ace0b6f3101e58ad914492a
     web_url         = models.ForeignKey("WebUrl") # maybe useful
     domain          = models.ForeignKey("Domain")
 
