@@ -18,7 +18,7 @@ def fake_get_user_type(request):
 def fake_get_browse_datetime(request):
     response_data = {}
 
-    response_data["total_time"] = 3000
+    response_data["total_time"] = 100
     response_data["data"] = [{"type": u"新闻", "seconds": 30}, 
                              {"type": u"娱乐", "seconds": 50}]
 
