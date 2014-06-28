@@ -20,14 +20,14 @@ class UrlTime(models.Model):
     domain          = models.ForeignKey("Domain")
 
 
-class WebLabelCategory(models.Model):
-    name            = models.CharField(max_length=32)
+# class WebLabelCategory(models.Model):
+#     name            = models.CharField(max_length=32)
 
 
 class WebUrlLabel(models.Model):
     name            = models.CharField(max_length=32)
     domain          = models.ForeignKey("Domain")
-    category        = models.ForeignKey("WebLabelCategory", null=True)
+    # category        = models.ForeignKey("WebLabelCategory", null=True)
 
 
 class UserLabel(models.Model):

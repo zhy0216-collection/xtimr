@@ -2,7 +2,7 @@
 import datetime
 
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.views.decorators.http import require_http_methods
 import ujson
 ### local module
@@ -61,4 +61,17 @@ def user_post_data(request):
                         content_type="application/json"
                     )
 
+
+@require_http_methods(["GET", "POST"])
+def readability(request):
+    if request.method == "GET":
+        url = request.GET.get("url") or None
+        if url is None:
+            raise Http404
+        from readability.readability import Document
+        import urllib
+        html = urllib.urlopen(url).read()
+        readable_article = Document(html).summary()
+
+        return HttpResponse(readable_article)
 
