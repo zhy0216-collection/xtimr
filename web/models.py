@@ -7,10 +7,11 @@ class WebUrl(models.Model):
     domain          = models.CharField(max_length=32)
     url_type        = models.CharField(max_length=32)
 
-class UserTime(models.Model):
+class UrlTime(models.Model):
     userid          = models.IntegerField()
     start_time      = models.DateTimeField()
     seconds         = models.IntegerField()
+    web_url         = models.ForeignKey("WebUrl")
 
 
 class WebUrlLabel(models.Model):
