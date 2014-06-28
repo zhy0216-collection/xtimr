@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import datetime
+from collections import defaultdict
 
 from django.shortcuts import render
 
@@ -18,50 +19,33 @@ from web.utils import parse_domain
 
 
 # Create your views here.
-def get_browser_datetime():
+def get_browser_datetime(request):
     now = datetime.datetime.today()
     begin_time = datetime.date.today()
     end_time = begin_time + datetime.timedelta(1)
     urltimes = UrlTime.objects.filter(end_time__lte=endtime, end_time__bte=begin_time)
-    urltimes_uniq = _urltimes_uniq(urltimes)
-    domain_list = _map_domain(urltimes_uniq)
-    label_list =  _map_label(domain_list)
-    return ujson.dump(label_list)
 
+    url_times_list = [(_.domain, _.milli_seconds) for _ in urltimes]
 
-def _map_label(domain_list):
-    label_dict ={}
-    for _ in domain_list:
-        try:
-            labels_of_domain = WebUrlLabel.objects.filter(domain__strartswith=_.name)
-            domain_item_list =  label_dict[_]
-            domain_item_list.append(_)
-        except KeyError:
-            domain_item_list =[]
-            domain_item_list.append(_)
-            d[_.label] = domain_ite_list
+    domain_sum = defaultdict(int)
 
-def _map_domain(urltimes):
-    domain_dict = {}
-    for _ in urltimes:
-        try:
-            url_list = domain_dict[_.domain]
-            url_list.append(_)
-        except KeyError:
-            url_list = []
-            url_list.appent(_)
-            d[_.domain] = url_list
-    return domain_dict
+    for domain, milli_seconds in url_times_list:
+        domain_sum[domain] += milli_seconds
 
-def _urltimes_uniq(urltimes):
-    d = {}
-    for url_time in urltimes:
-        try:
-            item = d[url_time.web_url]
-            item.seconds += url_time.seconds
-        except KeyError:
-            d[url_time.web_url] = url_time
-    return d
+    result = []
+
+    label_sum = defaultdict(list)
+    for domain in domain_sum:
+        label_sum[domain.label].append(domain)
+
+    for label in label_sum:
+        d = {"type": label.name}
+        seconds = sum([domain_sum[_] for _ in label_sum[label]]) / 1000
+        d["seconds"] = seconds 
+        d["details"] = [{"name": domain.title,
+                         "seconds": domain_sum[domain] / 1000} for domain in label_sum[label]]
+
+    return ujson.dump(result)
 
 
 def fake_get_user_type(request):
@@ -85,10 +69,11 @@ def fake_get_browse_datetime(request):
 @require_http_methods(["POST"])
 def user_post_data(request):
     userid = request.META.get("HTTP_X_UDID")
+    # print "data:%s"%request.POST
+    # print "userid:%s"%userid
 
     data = request.POST["data"]
     data = ujson.loads(data)
-    print "data:%s"%data
     for url_time_dict in data["data"]:
         raw_url = url_time_dict["url"]
         domain_name = parse_domain(raw_url) 
