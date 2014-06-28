@@ -55,3 +55,4 @@ docs/_build/
 
 # perosnal
 local_settings.py
+*.pem
