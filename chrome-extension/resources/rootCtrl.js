@@ -1,7 +1,7 @@
-var base_url = 'http://192.168.1.3:9999/';
+var base_url = 'http://192.168.1.3:9999';
 var request_url = {
-  'getUserAnalysis' : base_url + 'get-user-type',
-  'getBrowseInfo'   : base_url + 'get-browse-datetime'
+  'getUserAnalysis' : base_url + '/get-user-type',
+  'getBrowseInfo'   : base_url + '/get-browse-datetime'
 };
 
 var rootCtrl = function( $scope, $http, $q, $timeout ) {
@@ -31,8 +31,8 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
 
   $scope.init = function() {
     
-     var a_analysis = $http.get( request_url.getUserAnalysis );
-     var a_browse = $http.get( request_url.getBrowseInfo );
+     var a_analysis = $http.get( request_url.getUserAnalysis, {headers: {'X-UDID':localStorage.uuid}});
+     var a_browse = $http.get( request_url.getBrowseInfo, {headers: {'X-UDID':localStorage.uuid}});
 
      $q.all( [a_analysis, a_browse] ).then( function( values ) {
      $scope.data.analysis = values[0].data;
@@ -123,22 +123,23 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
     }
 
     var vis = d3.select(selector)
-        .append("svg:svg")
-        .data([data])
-        .attr("width", w)
-        .attr("height", h)
-        .append("svg:g")
-        .attr("transform", "translate(" + r + "," + r + ")");
+                .append("svg:svg")
+                .data([data])
+                .attr("width", w)
+                .attr("height", h)
+                .append("svg:g")
+                .attr("transform", "translate(" + r + "," + r + ")");
 
     var arc = d3.svg.arc().outerRadius(r);
 
     var pie = d3.layout.pie().value(function(d) { return d.value; });
 
     var arcs = vis.selectAll("g.slice")
-        .data(pie)
-        .enter()
-        .append("svg:g")
-        .attr("class", "slice");    //allow us to style things in the slices (like text)
+                  .data(pie)
+                  .enter()
+                  .append("svg:g")
+                  .attr("class", "slice");    
+                  //allow us to style things in the slices (like text)
 
     arcs.append("svg:path")
         .attr("fill", function(d, i) { return color(i); } )

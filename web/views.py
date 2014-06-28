@@ -13,18 +13,19 @@ from django.views.decorators.http import require_http_methods
 
 ### local module
 
-from web.models import WebUrl, Domain, UrlTime
+from web.models import WebUrl, Domain, UrlTime, WebUrlLabel
 from web.utils import parse_domain
 
 
 
 # Create your views here.
 def get_browse_datetime(request):
+    userid = request.META.get("HTTP_X_UDID")
     now = datetime.datetime.today()
     begin_time = datetime.date.today()
     end_time = begin_time + datetime.timedelta(days=1)
-    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=begin_time)
-    print "urltimes:%s"%urltimes
+    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=begin_time, userid=userid)
+    # print "urltimes:%s"%urltimes
     url_times_list = [(_.domain, _.milli_seconds) for _ in urltimes]
 
     domain_sum = defaultdict(int)
@@ -72,17 +73,24 @@ def user_post_data(request):
     data = request.POST["data"]
     data = ujson.loads(data)
     for url_time_dict in data["data"]:
+
+        # dirty code, change me
+        try:
+            int(url_time_dict["start_time"])
+        except:
+            continue
         raw_url = url_time_dict["url"]
         domain_name = parse_domain(raw_url) 
 
         domain,created = Domain.objects.get_or_create(name=domain_name)
         web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain)
 
+
         start_time = datetime.datetime.fromtimestamp(int(url_time_dict["start_time"])/1000)
-        print 'url_time_dict["start_time"]:%s'%url_time_dict["start_time"]
-        print "start_time:%s"%start_time
+        # print 'url_time_dict["start_time"]:%s'%url_time_dict["start_time"]
+        # print "start_time:%s"%start_time
         milli_seconds = float(url_time_dict["milli_seconds"])
-        print "milli_seconds:%s"%url_time_dict["milli_seconds"]
+        # print "milli_seconds:%s"%url_time_dict["milli_seconds"]
         end_time = start_time + datetime.timedelta(seconds=milli_seconds/1000)
 
         result = {
@@ -118,5 +126,20 @@ def readability(request):
 @require_http_methods(["GET", "POST"])
 def label_manage(request):
     if request.method == "GET":
-        return render()
+        userid = request.META.get("HTTP_X_UDID")
+        domain_id_list = [_["domain_id"] for _ in UrlTime.objects.filter(userid=userid).distinct("domain_id").values("domain_id")]
+        domain_list = Domain.objects.filter(id__in=domain_id_list, label_id=1)
+        label_list =[_.label for _ in domain_list]
+
+    elif request.method == "POST":
+        pass
+
+
+@require_http_methods(["POST"])
+def create_label(request):
+    name = request.POST.get("name")
+    WebUrlLabel.get_or_create(name=name)
+    return HttpResponse(ujson.dumps({"success":True}), 
+                        content_type="application/json"
+                    )
 
