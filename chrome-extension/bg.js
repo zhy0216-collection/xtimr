@@ -5,6 +5,7 @@ chrome.browserAction.onClicked.addListener( function( tab ) {
   chrome.tabs.create( {url : 'view.html'} );
 } );
 
+
 var guid = (function() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
@@ -46,10 +47,11 @@ localStorage.uuid = localStorage.uuid || guid();
 localStorage.fail_time = localStorage.fail_time || JSON.stringify([]);
 
 chrome.extension.onMessage.addListener(function(data){
-  console.log(data);
-  console.log(localStorage.fail_time);
+  console.log("fire event")
+  // console.log(data);
+  // console.log(localStorage.fail_time);
   var time_array = JSON.parse(localStorage.fail_time).concat(data);
-  console.log(time_array);
+  // console.log(time_array);
   push_time(time_array);
 });
 

@@ -2,7 +2,7 @@ var baseUrl = 'http://192.168.1.3:9999';
 
 var send_time = function(){
   var data = {};
-  data.start_time = localStorage.start_time;
+  data.start_time = localStorage.start_time || new Date().getTime();
   data.end_time = new Date().getTime();
   data.milli_seconds = data.end_time - data.start_time;
   data.url = document.location.href;
@@ -12,10 +12,7 @@ var send_time = function(){
 };
 
 if(document.visibilityState == 'visible'){
-  var start_time = new Date().getTime();
-  if(!localStorage.start_time){
-    localStorage.start_time = start_time;
-  }
+    localStorage.start_time = localStorage.start_time || new Date().getTime();
 }
 document.addEventListener("visibilitychange", function(){
   if(document.hidden){
