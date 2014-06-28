@@ -29,36 +29,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="25" selection-start="2247" selection-end="2255" vertical-scroll-proportion="-49.5" vertical-offset="0" max-vertical-offset="2354">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rootCtrl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="rootCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="6" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.39356816" vertical-offset="337" max-vertical-offset="990">
+            <state line="202" column="4" selection-start="6100" selection-end="6105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
               <folding>
-                <element signature="e#271#313#0" expanded="false" />
-                <element signature="e#332#524#0" expanded="false" />
-                <element signature="e#352#490#0" expanded="false" />
-                <element signature="e#940#1350#0" expanded="false" />
-                <element signature="e#1432#1542#0" expanded="false" />
-                <element signature="e#1643#3770#0" expanded="false" />
-                <element signature="e#3811#3852#0" expanded="false" />
+                <element signature="e#61#169#0" expanded="false" />
+                <element signature="e#227#5892#0" expanded="false" />
+                <element signature="e#281#323#0" expanded="false" />
+                <element signature="e#342#556#0" expanded="false" />
+                <element signature="e#362#500#0" expanded="false" />
+                <element signature="e#370#428#0" expanded="false" />
+                <element signature="e#436#494#0" expanded="false" />
+                <element signature="e#586#2116#0" expanded="false" />
+                <element signature="e#592#882#0" expanded="false" />
+                <element signature="e#910#1388#0" expanded="false" />
+                <element signature="e#972#1382#0" expanded="false" />
+                <element signature="e#1415#2060#0" expanded="false" />
+                <element signature="e#1464#2054#0" expanded="false" />
+                <element signature="e#1474#1754#0" expanded="false" />
+                <element signature="e#1558#1744#0" expanded="false" />
+                <element signature="e#1572#1645#0" expanded="false" />
+                <element signature="e#1659#1732#0" expanded="false" />
+                <element signature="e#1764#2046#0" expanded="false" />
+                <element signature="e#1848#2036#0" expanded="false" />
+                <element signature="e#1862#1936#0" expanded="false" />
+                <element signature="e#1950#2024#0" expanded="false" />
+                <element signature="e#2155#4282#0" expanded="false" />
+                <element signature="e#2232#2413#0" expanded="false" />
+                <element signature="e#2252#2404#0" expanded="false" />
+                <element signature="e#2491#2539#0" expanded="false" />
+                <element signature="e#2576#2604#0" expanded="false" />
+                <element signature="e#2828#4267#0" expanded="false" />
+                <element signature="e#3330#3457#0" expanded="false" />
+                <element signature="e#3573#3696#0" expanded="false" />
+                <element signature="e#3812#3981#0" expanded="false" />
+                <element signature="e#4028#4146#0" expanded="false" />
+                <element signature="e#4334#5596#0" expanded="false" />
+                <element signature="e#4502#4634#0" expanded="false" />
+                <element signature="e#4521#4625#0" expanded="false" />
+                <element signature="e#5347#5495#0" expanded="false" />
+                <element signature="e#5637#5678#0" expanded="false" />
+                <element signature="e#5721#5882#0" expanded="false" />
+                <element signature="e#5796#5878#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="view.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-7.071429" vertical-offset="880" max-vertical-offset="2640">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="18" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
+            <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="0.3168" vertical-offset="0" max-vertical-offset="625">
               <folding>
                 <element signature="e#35#60#0" expanded="false" />
                 <element signature="e#79#145#0" expanded="false" />
@@ -88,10 +119,11 @@
         <option value="$PROJECT_DIR$/chrome-extension/bg.js" />
         <option value="$PROJECT_DIR$/chrome-extension/resources/style.css" />
         <option value="$PROJECT_DIR$/chrome-extension/lib/pure.min.css" />
-        <option value="$PROJECT_DIR$/chrome-extension/view.html" />
         <option value="$PROJECT_DIR$/chrome-extension/lib/d3.layout.cloud.js" />
-        <option value="$PROJECT_DIR$/chrome-extension/resources/style.scss" />
+        <option value="$PROJECT_DIR$/chrome-extension/lib/d3.layout.js" />
         <option value="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
+        <option value="$PROJECT_DIR$/chrome-extension/view.html" />
+        <option value="$PROJECT_DIR$/chrome-extension/resources/style.scss" />
       </list>
     </option>
   </component>
@@ -158,6 +190,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="xtimr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtimr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xtimr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,7 +326,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20016207" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1993517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -294,6 +340,27 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20016207" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -342,35 +409,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xtimr/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.47166923" vertical-offset="0" max-vertical-offset="653">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xtimr/urls.py">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="148" selection-end="148" vertical-scroll-proportion="0.2112" vertical-offset="0" max-vertical-offset="625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="25" selection-start="2247" selection-end="2255" vertical-scroll-proportion="-49.5" vertical-offset="0" max-vertical-offset="2354">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/lib/d3.layout.cloud.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="29" selection-start="380" selection-end="410" vertical-scroll-proportion="-9.669219" vertical-offset="6534" max-vertical-offset="8954">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -415,30 +458,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/xtimr/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xtimr/urls.py">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="148" selection-end="148" vertical-scroll-proportion="-4.714286" vertical-offset="0" max-vertical-offset="462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xtimr/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/utils.py">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="15" selection-start="606" selection-end="613" vertical-scroll-proportion="-11.0" vertical-offset="66" max-vertical-offset="34804">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="924">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="33" selection-start="1809" selection-end="1843" vertical-scroll-proportion="0.46094945" vertical-offset="887" max-vertical-offset="1540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/lib/d3.layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1895" column="5" selection-start="51914" selection-end="51914" vertical-scroll-proportion="0.79785603" vertical-offset="41169" max-vertical-offset="41822">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="4" selection-start="6100" selection-end="6105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <folding>
+            <element signature="e#61#169#0" expanded="false" />
+            <element signature="e#227#5892#0" expanded="false" />
+            <element signature="e#281#323#0" expanded="false" />
+            <element signature="e#342#556#0" expanded="false" />
+            <element signature="e#362#500#0" expanded="false" />
+            <element signature="e#370#428#0" expanded="false" />
+            <element signature="e#436#494#0" expanded="false" />
+            <element signature="e#586#2116#0" expanded="false" />
+            <element signature="e#592#882#0" expanded="false" />
+            <element signature="e#910#1388#0" expanded="false" />
+            <element signature="e#972#1382#0" expanded="false" />
+            <element signature="e#1415#2060#0" expanded="false" />
+            <element signature="e#1464#2054#0" expanded="false" />
+            <element signature="e#1474#1754#0" expanded="false" />
+            <element signature="e#1558#1744#0" expanded="false" />
+            <element signature="e#1572#1645#0" expanded="false" />
+            <element signature="e#1659#1732#0" expanded="false" />
+            <element signature="e#1764#2046#0" expanded="false" />
+            <element signature="e#1848#2036#0" expanded="false" />
+            <element signature="e#1862#1936#0" expanded="false" />
+            <element signature="e#1950#2024#0" expanded="false" />
+            <element signature="e#2155#4282#0" expanded="false" />
+            <element signature="e#2232#2413#0" expanded="false" />
+            <element signature="e#2252#2404#0" expanded="false" />
+            <element signature="e#2491#2539#0" expanded="false" />
+            <element signature="e#2576#2604#0" expanded="false" />
+            <element signature="e#2828#4267#0" expanded="false" />
+            <element signature="e#3330#3457#0" expanded="false" />
+            <element signature="e#3573#3696#0" expanded="false" />
+            <element signature="e#3812#3981#0" expanded="false" />
+            <element signature="e#4028#4146#0" expanded="false" />
+            <element signature="e#4334#5596#0" expanded="false" />
+            <element signature="e#4502#4634#0" expanded="false" />
+            <element signature="e#4521#4625#0" expanded="false" />
+            <element signature="e#5347#5495#0" expanded="false" />
+            <element signature="e#5637#5678#0" expanded="false" />
+            <element signature="e#5721#5882#0" expanded="false" />
+            <element signature="e#5796#5878#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-7.071429" vertical-offset="880" max-vertical-offset="2640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="264">
+        <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="0.3168" vertical-offset="0" max-vertical-offset="625">
           <folding>
             <element signature="e#35#60#0" expanded="false" />
             <element signature="e#79#145#0" expanded="false" />
             <element signature="e#156#191#0" expanded="false" />
             <element signature="e#210#278#0" expanded="false" />
             <element signature="e#289#326#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="6" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.39356816" vertical-offset="337" max-vertical-offset="990">
-          <folding>
-            <element signature="e#271#313#0" expanded="false" />
-            <element signature="e#332#524#0" expanded="false" />
-            <element signature="e#352#490#0" expanded="false" />
-            <element signature="e#940#1350#0" expanded="false" />
-            <element signature="e#1432#1542#0" expanded="false" />
-            <element signature="e#1643#3770#0" expanded="false" />
-            <element signature="e#3811#3852#0" expanded="false" />
           </folding>
         </state>
       </provider>

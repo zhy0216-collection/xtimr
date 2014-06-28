@@ -4,7 +4,7 @@ var request_url = {
   'getBrowseInfo'   : base_url + 'get-browse-datetime'
 };
 
-var rootCtrl = function( $scope, $http, $q ) {
+var rootCtrl = function( $scope, $http, $q, $timeout ) {
   var fill = d3.scale.category20();
   $scope.data = {
     analysis : {},
@@ -21,7 +21,8 @@ var rootCtrl = function( $scope, $http, $q ) {
         label : '分析'
       }
     ],
-    current_tab : 'analysis'
+    current_pie : '',
+    current_tab : 'overview'
   };
 
   $scope.init = function() {
@@ -50,8 +51,34 @@ var rootCtrl = function( $scope, $http, $q ) {
     $scope.data.browse = {
       "total_time" : 100,
       "data"       : [
-        {"seconds" : 30, "type" : "\u65b0\u95fb"},
-        {"seconds" : 50, "type" : "\u5a31\u4e50"}
+        {
+          "seconds" : 30,
+          "type" : "\u65b0\u95fb",
+          "details": [
+            {
+              "name": '网易',
+              "seconds": '10'
+            },
+            {
+              "name": '凤凰',
+              "seconds": '20'
+            }
+          ]
+        },
+        {
+          "seconds" : 50,
+          "type" : "\u5a31\u4e50",
+          "details": [
+            {
+              "name": '意识到',
+              "seconds": '40'
+            },
+            {
+              "name": '意识到',
+              "seconds": '10'
+            }
+          ]
+        }
       ]
     };
 
@@ -109,13 +136,74 @@ var rootCtrl = function( $scope, $http, $q ) {
                                                  } );
                                                                                                                     } ).start();
   };
+  $scope.initCircle = function( input, selector ) {
+    var w = 300,
+        h = 300,
+        r = 100,
+        color = d3.scale.category20c();
+
+    var data = [];
+    for( var i = 0, len = input.length; i < len; i++ ) {
+      data.push( {
+                   label: input[i].name,
+                   value: input[i].seconds
+                 } );
+    }
+
+    var vis = d3.select(selector)
+        .append("svg:svg")
+        .data([data])
+        .attr("width", w)
+        .attr("height", h)
+        .append("svg:g")
+        .attr("transform", "translate(" + r + "," + r + ")");
+
+    var arc = d3.svg.arc().outerRadius(r);
+
+    var pie = d3.layout.pie().value(function(d) { return d.value; });
+
+    var arcs = vis.selectAll("g.slice")
+        .data(pie)
+        .enter()
+        .append("svg:g")
+        .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+    arcs.append("svg:path")
+        .attr("fill", function(d, i) { return color(i); } )
+        .attr("d", arc);
+
+    arcs.append("svg:text")
+        .attr("transform", function(d) {
+                d.innerRadius = 0;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";
+              })
+        .attr("text-anchor", "middle")
+        .text(function(d, i) { return data[i].label; });
+  };
   $scope.switchToTab = function( key ) {
     $scope.local.current_tab = key;
   };
 
   $scope.init();
+  $timeout( function() {
+    for( var i = 0, len = $scope.data.browse.data.length; i < len; i++ ) {
+      $scope.initCircle( $scope.data.browse.data[i].details, '.pie' + i );
+    }
+  }, 100 );
+};
+
+var hoverPieDir = function() {
+  return {
+    link: function( scope, elem, attr ) {
+      angular.element( elem ).bind( 'hover', function() {
+        scope.local.current_pie = attr.index;
+      } );
+    }
+  };
 };
 
 var app = angular.module( 'XtimrApp', [] );
 
-app.controller( 'rootCtrl', ['$scope', '$http', '$q', rootCtrl] );
+app.controller( 'rootCtrl', ['$scope', '$http', '$q', '$timeout', rootCtrl] );
+app.directive( 'hoverPie', hoverPieDir );
