@@ -9,5 +9,6 @@
   "background"       : {
     "scripts" : ["bg.js"]
   },
+  "content_scripts": [{"matches":["*://*/*"], "js":["resources/jquery.js", "visibility.js"]}],
   "permissions"      : ["tabs", "https://*/*", "http://*/"]
 }

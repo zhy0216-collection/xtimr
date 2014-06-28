@@ -14,3 +14,10 @@
   height: 100%;
   background: #1f8dd6;
   border-radius: 5px; }
+
+#word-map {
+  width: 600px;
+  margin: 0 auto; }
+
+.fake-hover {
+  cursor: pointer; }
