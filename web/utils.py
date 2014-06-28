@@ -21,6 +21,23 @@ def fetch_domain_title():
         domain.save()
 
 
+
+def display_domain_needed_fix():
+    domains = Domain.objects.filter(Q(label__isnull=True) | Q(label=1))
+    labels = WebUrlLabel.objects.all()
+    for d in domains: print d.name
+    for l in labels: print(l.name, l.id)
+    input_domain_name = raw_input("please input domain :")
+    input_label_id = raw_input("please input label id :")
+    domain = [_ for _ in domains if _.title==input_domain_name][0]
+    domain.label_id = int(input_label_id)
+    domain.save()
+
+def manual_fix_label(label_name, domain_name):
+    pass
+
+
+        
 def parse_domain(url, levels=3):
     """
     Given a URL or hostname, returns the domain to the given level (level 1 is the top-level domain).
