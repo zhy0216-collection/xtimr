@@ -4,14 +4,20 @@ from django.db import models
 class WebUrl(models.Model):
     raw_url         = models.CharField(max_length=512)
     domain          = models.CharField(max_length=32)
-    description     = models.CharField(max_length=512)
+    url_type        = models.CharField(max_length=32)
 
-class WebLabel(models.Model):
+class UserTime(models.Model):
+    userid          = models.IntegerField()
+    start_time      = models.DateTimeField()
+    seconds         = models.IntegerField()
+
+
+class WebUrlLabel(models.Model):
     name            = models.CharField(max_length=30)
-    
+    web_url         = models.ForeignKey("WebUrl")
 
 
-class PersonLabel(models.Model):
+class UserLabel(models.Model):
     name            = models.CharField(max_length=30)
 
 
