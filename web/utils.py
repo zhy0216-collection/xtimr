@@ -1,5 +1,26 @@
+
 from urlparse import urlparse
- 
+from django.db.models import Q
+from web.models import Domain
+import urllib2
+import re
+
+from bs4 import BeautifulSoup
+
+
+
+
+def fetch_domain_title():
+    miss_title_domain = Domain.objects.filter(Q(title__isnull=True) |Q(title__exact=''))
+    for domain in miss_title_domain:
+        html = urllib2.urlopen('http://' + domain.name).read()
+        soup = BeautifulSoup(html)
+        title = soup.find('title').text
+        title = re.split(u'[- ]+', title)[0]
+        domain.title = title
+        domain.save()
+
+
 def parse_domain(url, levels=3):
     """
     Given a URL or hostname, returns the domain to the given level (level 1 is the top-level domain).
