@@ -193,17 +193,6 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
   }, 100 );
 };
 
-var hoverPieDir = function() {
-  return {
-    link: function( scope, elem, attr ) {
-      angular.element( elem ).bind( 'hover', function() {
-        scope.local.current_pie = attr.index;
-      } );
-    }
-  };
-};
-
 var app = angular.module( 'XtimrApp', [] );
 
 app.controller( 'rootCtrl', ['$scope', '$http', '$q', '$timeout', rootCtrl] );
-app.directive( 'hoverPie', hoverPieDir );

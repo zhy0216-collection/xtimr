@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5e016cce-47e4-4f0f-bc99-73f96ddd6bd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" afterPath="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/resources/style.css" afterPath="$PROJECT_DIR$/chrome-extension/resources/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/resources/style.scss" afterPath="$PROJECT_DIR$/chrome-extension/resources/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/view.html" afterPath="$PROJECT_DIR$/chrome-extension/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xtimr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="rootCtrl.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="rootCtrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="202" column="4" selection-start="6100" selection-end="6105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+            <state line="197" column="78" selection-start="6018" selection-end="6018" vertical-scroll-proportion="0.23583461" vertical-offset="0" max-vertical-offset="653">
               <folding>
                 <element signature="e#61#169#0" expanded="false" />
                 <element signature="e#227#5892#0" expanded="false" />
@@ -80,16 +76,16 @@
       <file leaf-file-name="view.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-7.071429" vertical-offset="880" max-vertical-offset="2640">
+            <state line="50" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-39.285713" vertical-offset="0" max-vertical-offset="2662">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="0.3168" vertical-offset="0" max-vertical-offset="625">
+            <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="-7.071429" vertical-offset="0" max-vertical-offset="330">
               <folding>
                 <element signature="e#35#60#0" expanded="false" />
                 <element signature="e#79#145#0" expanded="false" />
@@ -121,9 +117,9 @@
         <option value="$PROJECT_DIR$/chrome-extension/lib/pure.min.css" />
         <option value="$PROJECT_DIR$/chrome-extension/lib/d3.layout.cloud.js" />
         <option value="$PROJECT_DIR$/chrome-extension/lib/d3.layout.js" />
-        <option value="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
         <option value="$PROJECT_DIR$/chrome-extension/view.html" />
         <option value="$PROJECT_DIR$/chrome-extension/resources/style.scss" />
+        <option value="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
       </list>
     </option>
   </component>
@@ -527,9 +523,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="-7.071429" vertical-offset="0" max-vertical-offset="330">
+          <folding>
+            <element signature="e#35#60#0" expanded="false" />
+            <element signature="e#79#145#0" expanded="false" />
+            <element signature="e#156#191#0" expanded="false" />
+            <element signature="e#210#278#0" expanded="false" />
+            <element signature="e#289#326#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-39.285713" vertical-offset="0" max-vertical-offset="2662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="4" selection-start="6100" selection-end="6105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+        <state line="197" column="78" selection-start="6018" selection-end="6018" vertical-scroll-proportion="0.23583461" vertical-offset="0" max-vertical-offset="653">
           <folding>
             <element signature="e#61#169#0" expanded="false" />
             <element signature="e#227#5892#0" expanded="false" />
@@ -569,26 +585,6 @@
             <element signature="e#5637#5678#0" expanded="false" />
             <element signature="e#5721#5882#0" expanded="false" />
             <element signature="e#5796#5878#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-7.071429" vertical-offset="880" max-vertical-offset="2640">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="0.3168" vertical-offset="0" max-vertical-offset="625">
-          <folding>
-            <element signature="e#35#60#0" expanded="false" />
-            <element signature="e#79#145#0" expanded="false" />
-            <element signature="e#156#191#0" expanded="false" />
-            <element signature="e#210#278#0" expanded="false" />
-            <element signature="e#289#326#0" expanded="false" />
           </folding>
         </state>
       </provider>
