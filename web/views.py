@@ -2,9 +2,19 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
-import ujson
-# Create your views here.
+import datetime
 
+
+
+
+import ujson
+
+
+
+from .models import *
+# Create your views here.
+def get_browser_datetime():
+    begin_time = datetime.datetime()
 
 def fake_get_user_type(request):
     response_data = {}
