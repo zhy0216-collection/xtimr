@@ -42,7 +42,7 @@ def user_post_data(request):
         domain,created = Domain.objects.get_or_create(name=domain_name)
         web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain)
 
-        start_time = datetime.datetime.fromtimestamp(url_time_dict["start_time"]).strftime('%Y-%m-%d %H:%M:%S')
+        start_time = datetime.datetime.fromtimestamp(int(url_time_dict["start_time"])/1000)
         milli_seconds = float(url_time_dict["milli_seconds"])
         end_time = start_time + datetime.timedelta(seconds=milli_seconds/1000)
 
