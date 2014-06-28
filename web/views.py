@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
+import datetime
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.http import require_http_methods
 import ujson
-# Create your views here.
+### local module
 
+from web.models import WebUrl, Domain, UrlTime
+from web.utils import parse_domain
 
 def fake_get_user_type(request):
     response_data = {}
@@ -18,9 +22,43 @@ def fake_get_user_type(request):
 def fake_get_browse_datetime(request):
     response_data = {}
 
-    response_data["total_time"] = 3000
+    response_data["total_time"] = 100
     response_data["data"] = [{"type": u"新闻", "seconds": 30}, 
                              {"type": u"娱乐", "seconds": 50}]
 
     return HttpResponse(ujson.dumps(response_data), content_type="application/json")
+
+@require_http_methods(["POST"])
+def user_post_data(request):
+    userid = 1
+
+    data = request.POST["data"]
+    data = ujson.loads(data)
+    print "data:%s"%data
+    for url_time_dict in data["data"]:
+        raw_url = url_time_dict["url"]
+        domain_name = parse_domain(raw_url) 
+
+        domain,created = Domain.objects.get_or_create(name=domain_name)
+        web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain)
+
+        start_time = datetime.datetime.fromtimestamp(url_time_dict["start_time"]).strftime('%Y-%m-%d %H:%M:%S')
+        milli_seconds = float(url_time_dict["milli_seconds"])
+        end_time = start_time + datetime.timedelta(seconds=milli_seconds/1000)
+
+        result = {
+            "userid": userid,
+            "domain": domain,
+            "web_url": web_url,
+            "start_time": start_time,
+            "milli_seconds": milli_seconds,
+            "end_time": end_time,
+        }
+
+        url_time = UrlTime.objects.create(**result)
+
+    return HttpResponse(ujson.dumps({"success":True}), 
+                        content_type="application/json"
+                    )
+
 
