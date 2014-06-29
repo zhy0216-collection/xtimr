@@ -58,3 +58,7 @@ docs/_build/
 # perosnal
 local_settings.py
 *.pem
+.DS_Store
+chrome-extension.pem
+chrome-extension.zip
+.idea/
