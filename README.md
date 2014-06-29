@@ -1,9 +1,9 @@
 xtimr
 =======
 
-A project helps you to understand how you waste your time on web.
+A project helps you to understand how you waste your time on Chrome.
 
-[Segmentfault](http://segmentfault.com/) hackathon @BeiJing 2014 project with teammates: @Arnoldnuo, @angelazou and @mut0u.
+[Segmentfault](http://segmentfault.com/) hackathon @BeiJing 2014 project with teammates: @Arnoldnuo, @angelazou @mut0u, and @zhy0216.
 
 ### Server install
 
@@ -22,8 +22,3 @@ Then you need to install python dependency libraries:
 ### Client install
 
 install [Chrome](https://www.google.com/intl/en/chrome/browser/) and drag the `extension` fold to chrome
-
-
-
-
-
