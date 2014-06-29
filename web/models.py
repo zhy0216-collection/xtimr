@@ -12,8 +12,8 @@ class WebUrl(models.Model):
 
 class Domain(models.Model):
     name         = models.CharField(max_length=64)
-    label        = models.ForeignKey("WebUrlLabel")
     title        = models.CharField(max_length=64)
+    label        = models.ForeignKey("WebUrlLabel", blank=True, null=True)
 
     def __unicode__(self):
         return self.name

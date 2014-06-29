@@ -41,7 +41,7 @@ def get_browser_datetime(request):
     for label in label_sum:
         d = {"type": label.name}
         seconds = sum([domain_sum[_] for _ in label_sum[label]]) / 1000
-        d["seconds"]: = seconds 
+        d["seconds"] = seconds 
         d["details"] = [{"name": domain.title,
                          "seconds": domain_sum[domain] / 1000} for domain in label_sum[label]]
 
@@ -69,10 +69,11 @@ def fake_get_browse_datetime(request):
 @require_http_methods(["POST"])
 def user_post_data(request):
     userid = request.META.get("HTTP_X_UDID")
+    # print "data:%s"%request.POST
+    # print "userid:%s"%userid
 
     data = request.POST["data"]
     data = ujson.loads(data)
-    print "data:%s"%data
     for url_time_dict in data["data"]:
         raw_url = url_time_dict["url"]
         domain_name = parse_domain(raw_url) 
