@@ -53,8 +53,13 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
       ]
     };
     
-
     $scope.initMap( $scope.data.analysis.label );
+
+    //------------标签管理
+     var labels = {"labels":[{"id":"self.id","name":"self.name"}],"domains":[{"id":"id","name":"name","title":"title"}],"success":true};
+     $scope.user_labels = labels['labels'];
+     $scope.user_domains = labels['domains']
+
   };
   $scope.initMap = function( input ) {
     var words = [];
