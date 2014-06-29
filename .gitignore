@@ -56,3 +56,4 @@ docs/_build/
 # perosnal
 local_settings.py
 *.pem
+.DS_Store
