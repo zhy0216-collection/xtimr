@@ -1,4 +1,4 @@
-var base_url = 'http://192.168.1.3:9999';
+var base_url = 'http://192.168.1.177:8000';
 var request_url = {
   'getUserAnalysis' : base_url + '/get-user-type',
   'getBrowseInfo'   : base_url + '/get-browse-datetime'
@@ -35,8 +35,8 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
      var a_browse = $http.get( request_url.getBrowseInfo, {headers: {'X-UDID':localStorage.uuid}});
 
      $q.all( [a_analysis, a_browse] ).then( function( values ) {
-     $scope.data.analysis = values[0].data;
-     $scope.data.browse = values[1].data;
+       $scope.data.analysis = values[0].data;
+       $scope.data.browse = values[1].data;
      } );
     $scope.data.analysis = {
       "type"  : "\u65b0\u95fb\u8fbe\u4eba",
