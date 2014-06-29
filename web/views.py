@@ -42,7 +42,7 @@ def get_browser_datetime(request):
         d = {"type": label.name}
         seconds = sum([domain_sum[_] for _ in label_sum[label]]) / 1000
         d["seconds"]: = seconds 
-        d["details"] = [{"name": domain.name,
+        d["details"] = [{"name": domain.title,
                          "seconds": domain_sum[domain] / 1000} for domain in label_sum[label]]
 
     return ujson.dump(result)

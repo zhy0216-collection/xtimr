@@ -4,7 +4,7 @@ from django.db import models
 
 class WebUrl(models.Model):
     raw_url         = models.CharField(max_length=512)
-    label          = models.ForeignKey("WebUrlLabel")
+    domain          = models.ForeignKey("Domain")
 
     def __unicode__(self):
         return self.raw_url
@@ -13,6 +13,7 @@ class WebUrl(models.Model):
 class Domain(models.Model):
     name         = models.CharField(max_length=64)
     label        = models.ForeignKey("WebUrlLabel")
+    title        = models.CharField(max_length=64)
 
     def __unicode__(self):
         return self.name
