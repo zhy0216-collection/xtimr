@@ -36,7 +36,7 @@ def _map_label(domain_list):
             labels_of_domain = WebUrlLabel.objects.filter(domain__strartswith=_.name)
             domain_item_list =  label_dict[_]
             domain_item_list.append(_)
-        catch KeyError:
+        except KeyError:
             domain_item_list =[]
             domain_item_list.append(_)
             d[_.label] = domain_ite_list
@@ -47,7 +47,7 @@ def _map_domain(urltimes):
         try:
             url_list = domain_dict[_.domain]
             url_list.append(_)
-        catch KeyError:
+        except KeyError:
             url_list = []
             url_list.appent(_)
             d[_.domain] = url_list
@@ -59,9 +59,9 @@ def _urltimes_uniq(urltimes):
         try:
             item = d[url_time.web_url]
             item.seconds += url_time.seconds
-        catch KeyError:
+        except KeyError:
             d[url_time.web_url] = url_time
-     return d
+    return d
 
 
 def fake_get_user_type(request):
@@ -84,7 +84,7 @@ def fake_get_browse_datetime(request):
 
 @require_http_methods(["POST"])
 def user_post_data(request):
-    userid = 1
+    userid = request.META.get("HTTP_X_UDID")
 
     data = request.POST["data"]
     data = ujson.loads(data)
