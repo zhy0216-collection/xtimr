@@ -19,12 +19,12 @@ from web.utils import parse_domain
 
 
 # Create your views here.
-def get_browser_datetime(request):
+def get_browse_datetime(request):
     now = datetime.datetime.today()
     begin_time = datetime.date.today()
-    end_time = begin_time + datetime.timedelta(1)
-    urltimes = UrlTime.objects.filter(end_time__lte=endtime, end_time__bte=begin_time)
-
+    end_time = begin_time + datetime.timedelta(days=1)
+    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=begin_time)
+    print "urltimes:%s"%urltimes
     url_times_list = [(_.domain, _.milli_seconds) for _ in urltimes]
 
     domain_sum = defaultdict(int)
@@ -45,9 +45,10 @@ def get_browser_datetime(request):
         d["details"] = [{"name": domain.title,
                          "seconds": domain_sum[domain] / 1000} for domain in label_sum[label]]
 
-    return ujson.dump(result)
+    return HttpResponse(ujson.dumps(result), content_type="application/json")
+ 
 
-
+# change me
 def fake_get_user_type(request):
     response_data = {}
 
@@ -57,18 +58,11 @@ def fake_get_user_type(request):
 
     return HttpResponse(ujson.dumps(response_data), content_type="application/json")
 
-def fake_get_browse_datetime(request):
-    response_data = {}
-
-    response_data["total_time"] = 100
-    response_data["data"] = [{"type": u"新闻", "seconds": 30}, 
-                             {"type": u"娱乐", "seconds": 50}]
-
-    return HttpResponse(ujson.dumps(response_data), content_type="application/json")
 
 @require_http_methods(["POST"])
 def user_post_data(request):
     userid = request.META.get("HTTP_X_UDID")
+    # print "request.META:%s"%request.META
     # print "data:%s"%request.POST
     # print "userid:%s"%userid
 
@@ -82,7 +76,10 @@ def user_post_data(request):
         web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain)
 
         start_time = datetime.datetime.fromtimestamp(int(url_time_dict["start_time"])/1000)
+        print 'url_time_dict["start_time"]:%s'%url_time_dict["start_time"]
+        print "start_time:%s"%start_time
         milli_seconds = float(url_time_dict["milli_seconds"])
+        print "milli_seconds:%s"%url_time_dict["milli_seconds"]
         end_time = start_time + datetime.timedelta(seconds=milli_seconds/1000)
 
         result = {
@@ -100,7 +97,7 @@ def user_post_data(request):
                         content_type="application/json"
                     )
 
-
+# test
 @require_http_methods(["GET", "POST"])
 def readability(request):
     if request.method == "GET":
@@ -113,4 +110,10 @@ def readability(request):
         readable_article = Document(html).summary()
 
         return HttpResponse(readable_article)
+
+
+@require_http_methods(["GET", "POST"])
+def label_manage(request):
+    if request.method == "GET":
+        return render()
 
