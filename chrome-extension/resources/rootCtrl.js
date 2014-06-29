@@ -29,28 +29,75 @@ var rootCtrl = function( $scope, $http, $q, $timeout ) {
     ],
     domains     : [],
     current_pie : '',
-    current_tab : 'label'
+    current_tab : 'overview'
   };
 
   $scope.init = function() {
+    /*
+     var a_analysis = $http.get( request_url.getUserAnalysis );
+     var a_browse = $http.get( request_url.getBrowseInfo );
+     var a_label = $http.get( request_url.getLabelInfo );
 
-    var a_analysis = $http.get( request_url.getUserAnalysis, {headers : {'X-UDID' : localStorage.uuid}} );
-    var a_browse = $http.get( request_url.getBrowseInfo, {headers : {'X-UDID' : localStorage.uuid}} );
-    var a_label = $http.get( request_url.getLabelInfo, {headers : {'X-UDID' : localStorage.uuid}} );
-
-    $q.all( [a_analysis, a_browse, a_label] ).then( function( values ) {
+     $q.all( [a_analysis, a_browse, a_label] ).then( function( values ) {
       $scope.data.analysis = values[0].data;
       $scope.data.browse = values[1].data;
-      //$scope.data.labels = values[2].data;
-
-      $scope.initMap( $scope.data.analysis.label );
-
-      $timeout( function() {
-        for( var i = 0, len = $scope.data.browse.data.length; i < len; i++ ) {
-          $scope.initCircle( $scope.data.browse.data[i].details, '.pie' + i );
+      $scope.data.label = values[2].data;
+     } );*/
+    $scope.data.analysis = {
+      "type"  : "\u65b0\u95fb\u8fbe\u4eba",
+      "label" : [
+        {"percent" : 10, "name" : "face"},
+        {"percent" : 20, "name" : "than"},
+        {"percent" : 30, "name" : "we"},
+        {"percent" : 40, "name" : "want"},
+        {"percent" : 50, "name" : "blood"},
+        {"percent" : 60, "name" : "furious"},
+        {"percent" : 70, "name" : "honestly"},
+        {"percent" : 80, "name" : "disgrace"},
+        {"percent" : 90, "name" : "rock you"},
+      ]
+    };
+    $scope.data.browse = {
+      "total_time" : 100,
+      "data"       : [
+        {
+          "seconds" : 30,
+          "type" : "\u65b0\u95fb",
+          "details": [
+            {
+              "name": '网易',
+              "seconds": '10'
+            },
+            {
+              "name": '凤凰',
+              "seconds": '20'
+            }
+          ]
+        },
+        {
+          "seconds" : 50,
+          "type" : "\u5a31\u4e50",
+          "details": [
+            {
+              "name": '意识到',
+              "seconds": '40'
+            },
+            {
+              "name": '意识到',
+              "seconds": '10'
+            }
+          ]
         }
-      }, 100 );
-    } );
+      ]
+    };
+
+    $scope.initMap( $scope.data.analysis.label );
+
+    $timeout( function() {
+      for( var i = 0, len = $scope.data.browse.data.length; i < len; i++ ) {
+        $scope.initCircle( $scope.data.browse.data[i].details, '.pie' + i );
+      }
+    }, 100 );
 
     //Overwrite
     $scope.data.labels = {
