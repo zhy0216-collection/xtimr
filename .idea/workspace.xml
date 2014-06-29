@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e016cce-47e4-4f0f-bc99-73f96ddd6bd2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" afterPath="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="xtimr.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,50 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="rootCtrl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="rootCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="78" selection-start="6018" selection-end="6018" vertical-scroll-proportion="0.23583461" vertical-offset="0" max-vertical-offset="653">
-              <folding>
-                <element signature="e#61#169#0" expanded="false" />
-                <element signature="e#227#5892#0" expanded="false" />
-                <element signature="e#281#323#0" expanded="false" />
-                <element signature="e#342#556#0" expanded="false" />
-                <element signature="e#362#500#0" expanded="false" />
-                <element signature="e#370#428#0" expanded="false" />
-                <element signature="e#436#494#0" expanded="false" />
-                <element signature="e#586#2116#0" expanded="false" />
-                <element signature="e#592#882#0" expanded="false" />
-                <element signature="e#910#1388#0" expanded="false" />
-                <element signature="e#972#1382#0" expanded="false" />
-                <element signature="e#1415#2060#0" expanded="false" />
-                <element signature="e#1464#2054#0" expanded="false" />
-                <element signature="e#1474#1754#0" expanded="false" />
-                <element signature="e#1558#1744#0" expanded="false" />
-                <element signature="e#1572#1645#0" expanded="false" />
-                <element signature="e#1659#1732#0" expanded="false" />
-                <element signature="e#1764#2046#0" expanded="false" />
-                <element signature="e#1848#2036#0" expanded="false" />
-                <element signature="e#1862#1936#0" expanded="false" />
-                <element signature="e#1950#2024#0" expanded="false" />
-                <element signature="e#2155#4282#0" expanded="false" />
-                <element signature="e#2232#2413#0" expanded="false" />
-                <element signature="e#2252#2404#0" expanded="false" />
-                <element signature="e#2491#2539#0" expanded="false" />
-                <element signature="e#2576#2604#0" expanded="false" />
-                <element signature="e#2828#4267#0" expanded="false" />
-                <element signature="e#3330#3457#0" expanded="false" />
-                <element signature="e#3573#3696#0" expanded="false" />
-                <element signature="e#3812#3981#0" expanded="false" />
-                <element signature="e#4028#4146#0" expanded="false" />
-                <element signature="e#4334#5596#0" expanded="false" />
-                <element signature="e#4502#4634#0" expanded="false" />
-                <element signature="e#4521#4625#0" expanded="false" />
-                <element signature="e#5347#5495#0" expanded="false" />
-                <element signature="e#5637#5678#0" expanded="false" />
-                <element signature="e#5721#5882#0" expanded="false" />
-                <element signature="e#5796#5878#0" expanded="false" />
-              </folding>
+            <state line="197" column="78" selection-start="6018" selection-end="6018" vertical-scroll-proportion="0.0" vertical-offset="4334" max-vertical-offset="4466">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,7 +38,34 @@
       <file leaf-file-name="view.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-39.285713" vertical-offset="0" max-vertical-offset="2662">
+            <state line="52" column="132" selection-start="2091" selection-end="2091" vertical-scroll-proportion="-0.0" vertical-offset="1144" max-vertical-offset="2662">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-extension/manifest.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="396" selection-end="396" vertical-scroll-proportion="-11.0" vertical-offset="0" max-vertical-offset="440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="5" selection-start="177" selection-end="177" vertical-scroll-proportion="0.56050956" vertical-offset="0" max-vertical-offset="1386">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visibility.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chrome-extension/visibility.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="21" selection-start="290" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
               <folding />
             </state>
           </provider>
@@ -85,14 +74,8 @@
       <file leaf-file-name="style.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="-7.071429" vertical-offset="0" max-vertical-offset="330">
-              <folding>
-                <element signature="e#35#60#0" expanded="false" />
-                <element signature="e#79#145#0" expanded="false" />
-                <element signature="e#156#191#0" expanded="false" />
-                <element signature="e#210#278#0" expanded="false" />
-                <element signature="e#289#326#0" expanded="false" />
-              </folding>
+            <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="682">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,12 +103,12 @@
         <option value="$PROJECT_DIR$/chrome-extension/view.html" />
         <option value="$PROJECT_DIR$/chrome-extension/resources/style.scss" />
         <option value="$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="18" />
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="774" />
@@ -217,64 +200,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtimr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtimr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chrome-extension" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style.scss" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtimr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtimr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chrome-extension" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtimr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xtimr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chrome-extension" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -282,6 +207,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/d3-cloud-master" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -313,21 +239,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="22" width="1280" height="774" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1993517" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20259319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -353,9 +279,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20016207" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -375,13 +301,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chrome-extension/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="239" selection-end="299" vertical-scroll-proportion="0.3872" vertical-offset="0" max-vertical-offset="625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/lib/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="32" selection-start="591" selection-end="1102" vertical-scroll-proportion="0.33690658" vertical-offset="0" max-vertical-offset="20108">
@@ -393,72 +312,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/bg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="0" selection-end="111" vertical-scroll-proportion="0.067381315" vertical-offset="0" max-vertical-offset="653">
-          <folding />
-        </state>
+        <state line="2" column="4" selection-start="0" selection-end="111" vertical-scroll-proportion="0.067381315" vertical-offset="0" max-vertical-offset="653" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/lib/pure.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18682" selection-start="18943" selection-end="18943" vertical-scroll-proportion="6.839204" vertical-offset="0" max-vertical-offset="4598">
-          <folding />
-        </state>
+        <state line="10" column="18682" selection-start="18943" selection-end="18943" vertical-scroll-proportion="6.839204" vertical-offset="0" max-vertical-offset="4598" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/lib/d3.layout.cloud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="380" selection-end="410" vertical-scroll-proportion="-9.669219" vertical-offset="6534" max-vertical-offset="8954">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="10" column="29" selection-start="380" selection-end="410" vertical-scroll-proportion="-9.669219" vertical-offset="6534" max-vertical-offset="8954" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/resources/pure.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="1" selection-start="2168" selection-end="2168" vertical-scroll-proportion="0.2588055" vertical-offset="1107" max-vertical-offset="2508">
-          <folding>
-            <element signature="e#5#23#0" expanded="false" />
-            <element signature="e#46#84#0" expanded="false" />
-            <element signature="e#177#365#0" expanded="false" />
-            <element signature="e#453#497#0" expanded="false" />
-            <element signature="e#513#553#0" expanded="false" />
-            <element signature="e#575#609#0" expanded="false" />
-            <element signature="e#637#655#0" expanded="false" />
-            <element signature="e#723#827#0" expanded="false" />
-            <element signature="e#837#947#0" expanded="false" />
-            <element signature="e#959#1019#0" expanded="false" />
-            <element signature="e#1031#1100#0" expanded="false" />
-            <element signature="e#1119#1182#0" expanded="false" />
-            <element signature="e#1315#1584#0" expanded="false" />
-            <element signature="e#1655#1721#0" expanded="false" />
-            <element signature="e#1835#1881#0" expanded="false" />
-            <element signature="e#1999#2032#0" expanded="false" />
-            <element signature="e#2145#2168#0" expanded="false" />
-            <element signature="e#2271#2297#0" expanded="false" />
-            <element signature="e#2387#2405#0" expanded="false" />
-            <element signature="e#2468#2518#0" expanded="false" />
-            <element signature="e#2804#3119#0" expanded="false" />
-            <element signature="e#3156#3179#0" expanded="false" />
-            <element signature="e#3197#3240#0" expanded="false" />
-            <element signature="e#3305#3366#0" expanded="false" />
-            <element signature="e#3414#3477#0" expanded="false" />
-            <element signature="e#3501#3525#0" expanded="false" />
-            <element signature="e#3685#4033#0" expanded="false" />
-            <element signature="e#3735#3787#0" expanded="false" />
-            <element signature="e#3799#3871#0" expanded="false" />
-            <element signature="e#3880#3902#0" expanded="false" />
-            <element signature="e#3917#3979#0" expanded="false" />
-            <element signature="e#4009#4031#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="127" column="1" selection-start="2168" selection-end="2168" vertical-scroll-proportion="0.2588055" vertical-offset="1107" max-vertical-offset="2508" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xtimr/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2200">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2200" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xtimr/urls.py">
@@ -466,30 +340,22 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="148" selection-end="148" vertical-scroll-proportion="-4.714286" vertical-offset="0" max-vertical-offset="462">
-          <folding />
-        </state>
+        <state line="6" column="13" selection-start="148" selection-end="148" vertical-scroll-proportion="-4.714286" vertical-offset="0" max-vertical-offset="462" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xtimr/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/utils.py">
@@ -497,95 +363,63 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="15" selection-start="606" selection-end="613" vertical-scroll-proportion="-11.0" vertical-offset="66" max-vertical-offset="34804">
-          <folding />
-        </state>
+        <state line="17" column="15" selection-start="606" selection-end="613" vertical-scroll-proportion="-11.0" vertical-offset="66" max-vertical-offset="34804" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="924">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="924" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="33" selection-start="1809" selection-end="1843" vertical-scroll-proportion="0.46094945" vertical-offset="887" max-vertical-offset="1540">
-          <folding />
-        </state>
+        <state line="54" column="33" selection-start="1809" selection-end="1843" vertical-scroll-proportion="0.46094945" vertical-offset="887" max-vertical-offset="1540" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/lib/d3.layout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1895" column="5" selection-start="51914" selection-end="51914" vertical-scroll-proportion="0.79785603" vertical-offset="41169" max-vertical-offset="41822">
+        <state line="1895" column="5" selection-start="51914" selection-end="51914" vertical-scroll-proportion="0.79785603" vertical-offset="41169" max-vertical-offset="41822" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="78" selection-start="6018" selection-end="6018" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="132" selection-start="2091" selection-end="2091" vertical-scroll-proportion="-0.0" vertical-offset="1144" max-vertical-offset="2662">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chrome-extension/resources/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="-7.071429" vertical-offset="0" max-vertical-offset="330">
-          <folding>
-            <element signature="e#35#60#0" expanded="false" />
-            <element signature="e#79#145#0" expanded="false" />
-            <element signature="e#156#191#0" expanded="false" />
-            <element signature="e#210#278#0" expanded="false" />
-            <element signature="e#289#326#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-extension/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="31" selection-start="1754" selection-end="1764" vertical-scroll-proportion="-39.285713" vertical-offset="0" max-vertical-offset="2662">
+        <state line="25" column="1" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="682">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chrome-extension/resources/rootCtrl.js">
+    <entry file="file://$PROJECT_DIR$/chrome-extension/visibility.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="78" selection-start="6018" selection-end="6018" vertical-scroll-proportion="0.23583461" vertical-offset="0" max-vertical-offset="653">
-          <folding>
-            <element signature="e#61#169#0" expanded="false" />
-            <element signature="e#227#5892#0" expanded="false" />
-            <element signature="e#281#323#0" expanded="false" />
-            <element signature="e#342#556#0" expanded="false" />
-            <element signature="e#362#500#0" expanded="false" />
-            <element signature="e#370#428#0" expanded="false" />
-            <element signature="e#436#494#0" expanded="false" />
-            <element signature="e#586#2116#0" expanded="false" />
-            <element signature="e#592#882#0" expanded="false" />
-            <element signature="e#910#1388#0" expanded="false" />
-            <element signature="e#972#1382#0" expanded="false" />
-            <element signature="e#1415#2060#0" expanded="false" />
-            <element signature="e#1464#2054#0" expanded="false" />
-            <element signature="e#1474#1754#0" expanded="false" />
-            <element signature="e#1558#1744#0" expanded="false" />
-            <element signature="e#1572#1645#0" expanded="false" />
-            <element signature="e#1659#1732#0" expanded="false" />
-            <element signature="e#1764#2046#0" expanded="false" />
-            <element signature="e#1848#2036#0" expanded="false" />
-            <element signature="e#1862#1936#0" expanded="false" />
-            <element signature="e#1950#2024#0" expanded="false" />
-            <element signature="e#2155#4282#0" expanded="false" />
-            <element signature="e#2232#2413#0" expanded="false" />
-            <element signature="e#2252#2404#0" expanded="false" />
-            <element signature="e#2491#2539#0" expanded="false" />
-            <element signature="e#2576#2604#0" expanded="false" />
-            <element signature="e#2828#4267#0" expanded="false" />
-            <element signature="e#3330#3457#0" expanded="false" />
-            <element signature="e#3573#3696#0" expanded="false" />
-            <element signature="e#3812#3981#0" expanded="false" />
-            <element signature="e#4028#4146#0" expanded="false" />
-            <element signature="e#4334#5596#0" expanded="false" />
-            <element signature="e#4502#4634#0" expanded="false" />
-            <element signature="e#4521#4625#0" expanded="false" />
-            <element signature="e#5347#5495#0" expanded="false" />
-            <element signature="e#5637#5678#0" expanded="false" />
-            <element signature="e#5721#5882#0" expanded="false" />
-            <element signature="e#5796#5878#0" expanded="false" />
-          </folding>
+        <state line="8" column="21" selection-start="290" selection-end="1172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chrome-extension/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="396" selection-end="396" vertical-scroll-proportion="-11.0" vertical-offset="0" max-vertical-offset="440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="177" selection-end="177" vertical-scroll-proportion="0.56050956" vertical-offset="0" max-vertical-offset="1386">
+          <folding />
         </state>
       </provider>
     </entry>
