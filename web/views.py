@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import datetime
+import urlparse
 from collections import defaultdict
 
 from django.shortcuts import render
@@ -13,7 +14,7 @@ from django.views.decorators.http import require_http_methods
 
 ### local module
 
-from web.models import WebUrl, Domain, UrlTime, WebUrlLabel
+from web.models import WebUrl
 from web.utils import parse_domain
 
 # no timezone sofar
@@ -52,6 +53,7 @@ def get_browse_datetime(request):
 
 @require_http_methods(["POST"])
 def user_post_data(request):
+    # TODO: consider timezone
     userid = request.META.get("HTTP_X_UDID")
     # print "request.META:%s"%request.META
     # print "data:%s"%request.POST
@@ -60,18 +62,10 @@ def user_post_data(request):
     data = request.POST["data"]
     data = ujson.loads(data)
     for url_time_dict in data["data"]:
-
-        # dirty code, change me
-        try:
-            int(url_time_dict["start_time"])
-        except:
-            continue
         raw_url = url_time_dict["url"]
         domain_name = parse_domain(raw_url)
-
-        domain,created = Domain.objects.get_or_create(name=domain_name)
-        web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain)
-
+        path = urlparse.urlparse(raw_url).path
+        web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain, path=path)
 
         start_time = datetime.datetime.fromtimestamp(int(url_time_dict["start_time"])/1000)
         # print 'url_time_dict["start_time"]:%s'%url_time_dict["start_time"]
@@ -87,6 +81,7 @@ def user_post_data(request):
             "start_time": start_time,
             "milli_seconds": milli_seconds,
             "end_time": end_time,
+
         }
 
         url_time = UrlTime.objects.create(**result)

@@ -1,10 +1,11 @@
 from django.test import TestCase
+from django.test.client import Client
 
 
-class TestCase(TestCase):
+class TestPostData(TestCase):
     def setUp(self):
-        pass
-    def test_animals_can_speak(self):
-        """Animals that can speak are correctly identified"""
+        self.client = Client(HTTP_X_UDID='9527')
+
+    def test_post_data(self):
         self.assertEqual(1,1)
 
