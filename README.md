@@ -9,12 +9,13 @@ A project helps you to understand how you waste your time on Chrome.
 
 First, make sure you got there stuff below:
 
-    * [MySQL](http://dev.mysql.com/downloads/) (Maybe you can use sqlite, but we have not test it)
-    * [Python 2.7](https://www.python.org/)
-    * [pip](https://github.com/pypa/pip)
+   * [MySQL](http://dev.mysql.com/downloads/) (Maybe you can use sqlite, but we have not test it)
+   * [Python 2.7](https://www.python.org/)
+   * [pip](https://github.com/pypa/pip)
 
 
 Then you need to install python dependency libraries:
+
 `pip install -r pip_requirements`
 
 @project-root, run `./manage.py runserver`

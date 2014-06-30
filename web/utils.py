@@ -1,43 +1,9 @@
 
 from urlparse import urlparse
 from django.db.models import Q
-from web.models import Domain
 import urllib2
 import re
 
-from bs4 import BeautifulSoup
-
-
-
-
-def fetch_domain_title():
-    miss_title_domain = Domain.objects.filter(Q(title__isnull=True) |Q(title__exact=''))
-    for domain in miss_title_domain:
-        html = urllib2.urlopen('http://' + domain.name).read()
-        soup = BeautifulSoup(html)
-        title = soup.find('title').text
-        title = re.split(u'[- ]+', title)[0]
-        domain.title = title
-        domain.save()
-
-
-
-def display_domain_needed_fix():
-    domains = Domain.objects.filter(Q(label__isnull=True) | Q(label=1))
-    labels = WebUrlLabel.objects.all()
-    for d in domains: print d.name
-    for l in labels: print(l.name, l.id)
-    input_domain_name = raw_input("please input domain :")
-    input_label_id = raw_input("please input label id :")
-    domain = [_ for _ in domains if _.title==input_domain_name][0]
-    domain.label_id = int(input_label_id)
-    domain.save()
-
-def manual_fix_label(label_name, domain_name):
-    pass
-
-
-        
 def parse_domain(url, levels=3):
     """
     Given a URL or hostname, returns the domain to the given level (level 1 is the top-level domain).
@@ -46,33 +12,37 @@ def parse_domain(url, levels=3):
     """
     if levels < 1 or not url:
         return None
-         
+
+    url = url.strip()
+    if not url.startswith("http://") or not url.startswith("https://"):
+        url = "http://%s"%url
+
     # Parse the hostname from the url
     parsed = urlparse(url)
     hostname = getattr(parsed,'netloc',url)
-     
+
     partial_domains = []
     partial_domain = ""
     for section in reversed(hostname.split(".")):
         partial_domain = "." + section + partial_domain
         partial_domains.append(partial_domain)
-         
+
     # Find the longest matching TLD, recording its index
     tld_idx = 0
     for idx, item in enumerate(partial_domains):
         if item in tlds:
             tld_idx = idx
-         
+
     # Add the desired number of levels to the tld index,
     # counting the TLD itself as the first level
     try:
         domain = partial_domains[tld_idx + levels - 1]
     except IndexError:
         domain = partial_domains[-1]
-     
+
     # Remove the initial dot
     return domain[1:]
-         
+
 tlds = set((
     '.2000.hu',
     '.ab.ca',
@@ -1609,5 +1579,5 @@ tlds = set((
     '.zt.ua',
     '.zw'
 ))
- 
- 
+
+

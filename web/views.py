@@ -16,9 +16,7 @@ from django.views.decorators.http import require_http_methods
 from web.models import WebUrl, Domain, UrlTime, WebUrlLabel
 from web.utils import parse_domain
 
-
-
-# Create your views here.
+# no timezone sofar
 def get_browse_datetime(request):
     userid = request.META.get("HTTP_X_UDID")
     now = datetime.datetime.today()
@@ -42,7 +40,7 @@ def get_browse_datetime(request):
     for label in label_sum:
         d = {"type": label.name}
         seconds = sum([domain_sum[_] for _ in label_sum[label]]) / 1000
-        d["seconds"] = seconds 
+        d["seconds"] = seconds
         d["details"] = [{"name": domain.title or domain.name,
                          "seconds": domain_sum[domain] / 1000} for domain in label_sum[label]]
         result.append(d)
@@ -50,17 +48,6 @@ def get_browse_datetime(request):
     data = {"data":result, "total_time": sum([_["seconds"] for _ in result])}
 
     return HttpResponse(ujson.dumps(data), content_type="application/json")
- 
-
-# change me
-def fake_get_user_type(request):
-    response_data = {}
-
-    response_data["type"] = u"新闻达人"
-    response_data["label"] = [{"name": u"label1", "percent": 12}, 
-                             {"name": u"label22", "percent": 22}]
-
-    return HttpResponse(ujson.dumps(response_data), content_type="application/json")
 
 
 @require_http_methods(["POST"])
@@ -80,7 +67,7 @@ def user_post_data(request):
         except:
             continue
         raw_url = url_time_dict["url"]
-        domain_name = parse_domain(raw_url) 
+        domain_name = parse_domain(raw_url)
 
         domain,created = Domain.objects.get_or_create(name=domain_name)
         web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain)
@@ -104,7 +91,7 @@ def user_post_data(request):
 
         url_time = UrlTime.objects.create(**result)
 
-    return HttpResponse(ujson.dumps({"success":True}), 
+    return HttpResponse(ujson.dumps({"success":True}),
                         content_type="application/json"
                     )
 
@@ -137,7 +124,7 @@ def label_manage(request):
             "success":True,
         }
 
-        return HttpResponse(ujson.dumps(result), 
+        return HttpResponse(ujson.dumps(result),
                         content_type="application/json"
                     )
 
@@ -150,11 +137,11 @@ def create_label(request):
     name = request.POST.get("name")
     label = WebUrlLabel.get_or_create(name=name)
     result = {
-        "success":True, 
+        "success":True,
         "label_id":label.id
     }
 
-    return HttpResponse(ujson.dumps(result), 
+    return HttpResponse(ujson.dumps(result),
                         content_type="application/json"
                     )
 
