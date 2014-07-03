@@ -16,6 +16,7 @@ from django.views.decorators.http import require_http_methods
 
 from web.models import WebUrl
 from web.utils import parse_domain
+from web.decorator import to_json
 
 # no timezone sofar
 def get_browse_datetime(request):
@@ -50,8 +51,8 @@ def get_browse_datetime(request):
 
     return HttpResponse(ujson.dumps(data), content_type="application/json")
 
-
 @require_http_methods(["POST"])
+@to_json
 def user_post_data(request):
     # TODO: consider timezone
     userid = request.META.get("HTTP_X_UDID")
@@ -86,9 +87,7 @@ def user_post_data(request):
 
         url_time = UrlTime.objects.create(**result)
 
-    return HttpResponse(ujson.dumps({"success":True}),
-                        content_type="application/json"
-                    )
+    return {"success":True}
 
 # test
 @require_http_methods(["GET", "POST"])

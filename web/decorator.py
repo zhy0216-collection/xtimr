@@ -1,4 +1,4 @@
-from funtools import wrap
+from functools import wraps
 
 
 import ujson
@@ -6,9 +6,9 @@ from django.http import HttpResponse
 
 
 def to_json(f):
-    @wrap
-    def _decorator_func(*args, *kwargs):
-        result = f(*args, *kwargs)
+    @wraps(f)
+    def _decorator_func(*args, **kwargs):
+        result = f(*args, **kwargs)
         return HttpResponse(ujson.dumps(result),
                             content_type="application/json"
                )
