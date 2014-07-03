@@ -14,7 +14,7 @@ def parse_domain(url, levels=3):
         return None
 
     url = url.strip()
-    if not url.startswith("http://") or not url.startswith("https://"):
+    if not url.startswith("http://") and not url.startswith("https://"):
         url = "http://%s"%url
 
     # Parse the hostname from the url

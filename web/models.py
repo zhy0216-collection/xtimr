@@ -37,6 +37,7 @@ class DomainDes(models.Model):
 class UrlTime(models.Model):
     userid                  = models.CharField(max_length=64)
     start_time              = models.DateTimeField()
+    # the time user browse the weburl
     milli_seconds           = models.IntegerField()
     end_time                = models.DateTimeField()
     web_url                 = models.ForeignKey("WebUrl")

@@ -14,7 +14,7 @@ from django.views.decorators.http import require_http_methods
 
 ### local module
 
-from web.models import WebUrl
+from web.models import WebUrl, UrlTime
 from web.utils import parse_domain
 from web.decorator import to_json
 
@@ -55,6 +55,7 @@ def get_browse_datetime(request):
 @to_json
 def user_post_data(request):
     # TODO: consider timezone
+    # TODO: rethink account system
     userid = request.META.get("HTTP_X_UDID")
     # print "request.META:%s"%request.META
     # print "data:%s"%request.POST
@@ -66,18 +67,14 @@ def user_post_data(request):
         raw_url = url_time_dict["url"]
         domain_name = parse_domain(raw_url)
         path = urlparse.urlparse(raw_url).path
-        web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain, path=path)
+        web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain_name, path=path)
 
         start_time = datetime.datetime.fromtimestamp(int(url_time_dict["start_time"])/1000)
-        # print 'url_time_dict["start_time"]:%s'%url_time_dict["start_time"]
-        # print "start_time:%s"%start_time
         milli_seconds = float(url_time_dict["milli_seconds"])
-        # print "milli_seconds:%s"%url_time_dict["milli_seconds"]
         end_time = start_time + datetime.timedelta(seconds=milli_seconds/1000)
 
         result = {
             "userid": userid,
-            "domain": domain,
             "web_url": web_url,
             "start_time": start_time,
             "milli_seconds": milli_seconds,
