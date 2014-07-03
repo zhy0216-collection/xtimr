@@ -14,7 +14,7 @@ from django.views.decorators.http import require_http_methods
 
 ### local module
 
-from web.models import WebUrl, UrlTime
+from web.models import WebUrl, UrlTime, Label, DomainRule
 from web.utils import parse_domain
 from web.decorator import to_json
 
@@ -50,6 +50,34 @@ def get_browse_datetime(request):
     data = {"data":result, "total_time": sum([_["seconds"] for _ in result])}
 
     return HttpResponse(ujson.dumps(data), content_type="application/json")
+
+@to_json
+def get_browse_datetime_by_category_label(request):
+    # TODO: optimize me
+    date_str = request.POST.get("date") or None
+    if date_str is None:
+        start_time = datetime.date.today()
+    else:
+        start_time = datetime.date(map(int, date_str.split("-")))
+
+    userid = request.META.get("HTTP_X_UDID")
+    end_time = start_time + datetime.timedelta(days=1)
+    labels = Label.objects.filter(label_type=Label.CATEGORY_TYPE)
+    domain_rules = DomainRule.objects.filter(category_label__in=labels)
+    domain_list = map(lambda x:x.domain, domain_rules)
+    domain_rule_dict = dict([(_.domain, _.label) for _ in domain_rules])
+    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=begin_time, userid=userid)
+    urltimes = filter(lambda x: x.web_url.domain in domain_list, urltimes)
+    result = defaultdict(int)
+
+    for url in urltimes:
+        key = domain_rule_dict[url.domain]
+        result[key] += url.milli_seconds
+
+    result["total_time"] = sum(result.values())
+    return result
+
+
 
 @require_http_methods(["POST"])
 @to_json

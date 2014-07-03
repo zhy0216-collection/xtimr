@@ -21,8 +21,6 @@ class TestPostData(TestCase):
 
         }
 
-
-
         r = self.client.post("/browse", {"data": ujson.dumps(data)})
         # print r.content
         json_data = ujson.loads(r.content)
