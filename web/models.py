@@ -42,6 +42,17 @@ class UrlTime(models.Model):
     end_time                = models.DateTimeField()
     web_url                 = models.ForeignKey("WebUrl")
 
+    def to_dict(self):
+        return {
+            "userid": self.userid,
+            "start_time": self.start_time,
+            "milli_seconds": self.milli_seconds,
+            "end_time": self.end_time,
+            "web_url": self.web_url
+        }
+
+    def __unicode__(self):
+        return str(self.to_dict())
 
 # make label manager
 

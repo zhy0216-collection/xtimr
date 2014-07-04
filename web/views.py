@@ -65,17 +65,19 @@ def get_browse_datetime_by_category_label(request):
     labels = Label.objects.filter(label_type=Label.CATEGORY_TYPE)
     domain_rules = DomainRule.objects.filter(category_label__in=labels)
     domain_list = map(lambda x:x.domain, domain_rules)
-    domain_rule_dict = dict([(_.domain, _.label) for _ in domain_rules])
-    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=begin_time, userid=userid)
-    urltimes = filter(lambda x: x.web_url.domain in domain_list, urltimes)
+    domain_rule_dict = dict([(_.domain, _.category_label) for _ in domain_rules])
+    urltimes = UrlTime.objects.filter(end_time__lte=end_time, start_time__gte=start_time, userid=userid)
+    # urltimes = filter(lambda x: x.web_url.domain in domain_list, urltimes)
+    # print "urltimes:%s"%urltimes
+    # print "domain_rule_dict:%s"%domain_rule_dict
+
     result = defaultdict(int)
 
-    for url in urltimes:
-        key = domain_rule_dict[url.domain]
-        result[key] += url.milli_seconds
+    for urltime in urltimes:
+        key = domain_rule_dict[urltime.web_url.domain]
+        result[key.name] += urltime.milli_seconds
 
-    result["total_time"] = sum(result.values())
-    return result
+    return {"labels": result, "total_time": sum(result.values())}
 
 
 
@@ -94,6 +96,10 @@ def user_post_data(request):
     for url_time_dict in data["data"]:
         raw_url = url_time_dict["url"]
         domain_name = parse_domain(raw_url)
+        domain_rule = DomainRule.objects.filter(domain=domain_name).first()
+        if domain_rule is None:
+            DomainRule.objects.create(domain=domain_name, category_label_id=1)
+
         path = urlparse.urlparse(raw_url).path
         web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain_name, path=path)
 
