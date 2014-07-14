@@ -104,7 +104,7 @@ def user_post_data(request):
         web_url, created = WebUrl.objects.get_or_create(raw_url=raw_url, domain=domain_name, path=path)
 
         start_time = datetime.datetime.fromtimestamp(int(url_time_dict["start_time"])/1000)
-        milli_seconds = float(url_time_dict["milli_seconds"])
+        milli_seconds = float(url_time_dict["total_milli_seconds"])
         end_time = start_time + datetime.timedelta(seconds=milli_seconds/1000)
 
         result = {

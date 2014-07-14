@@ -1,14 +1,32 @@
 {
-  "name"             : "xtimr",
-  "version"          : "1.0",
-  "manifest_version" : 2,
-  "description"      : "管理时间",
-  "browser_action"   : {
-    "default_icon" : "logo.png"
-  },
-  "background"       : {
-    "scripts" : ["lib/jquery.js", "bg.js"]
-  },
-  "content_scripts": [{"matches":["*://*/*"], "js":["lib/jquery.js", "visibility.js"]}],
-  "permissions"      : ["tabs", "https://*/*", "http://*/", "webRequest", "tabs"]
+    "name": "xtimr",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "管理时间",
+    "browser_action": {
+        "default_icon": "logo.png"
+    },
+    "background": {
+        "scripts": [
+            "lib/jquery.js",
+            "bg.js"
+        ]
+    },
+    "content_scripts": [{
+        "matches": [
+            "*://*/*"
+        ],
+        "js": [
+            "lib/jquery.js",
+            "visibility.js"
+        ]
+    }],
+    "permissions": [
+        "tabs",
+        "https://*/*",
+        "http://*/",
+        "webRequest",
+        "tabs",
+        "storage",
+    ]
 }

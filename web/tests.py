@@ -17,7 +17,7 @@ class TestPostData(TestCase):
             "data": [{
                 "url": "http://www.google.com/thisistest?hahah#nothing",
                 "start_time": time.time(),
-                "milli_seconds": 200 * 100 * 5, # mili_seconds
+                "total_milli_seconds": 200 * 100 * 5, # mili_seconds
                 }
             ]
 
@@ -39,11 +39,11 @@ class TestPostData(TestCase):
             "data": [{
                     "url": "http://www.google.com/thisistest?hahah#nothing",
                     "start_time": time.time() * 1000,
-                    "milli_seconds": 200 * 100 * 5, # mili_seconds
+                    "total_milli_seconds": 200 * 100 * 5, # mili_seconds
                 }, {
                     "url": "http://www.google.com/thisistest?hahah#nothing",
                     "start_time": time.time(),
-                    "milli_seconds": 200 * 100 * 5, # mili_seconds
+                    "total_milli_seconds": 200 * 100 * 5, # mili_seconds
                 }
             ]
 
@@ -55,17 +55,4 @@ class TestPostData(TestCase):
         data = ujson.loads(r.content)
 
         self.assertTrue(self.label.name in data["labels"])
-
-
-
-
-
-
-
-
-
-
-
-
-
 

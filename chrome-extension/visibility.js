@@ -1,29 +1,36 @@
-var baseUrl = 'http://192.168.1.3:9999';
+// var baseUrl = chrome.storage
+var start_time = new Date().getTime();
 
-var send_time = function(){
-  var data = {};
-  data.start_time = localStorage.start_time || new Date().getTime();
-  data.end_time = new Date().getTime();
-  data.milli_seconds = data.end_time - data.start_time;
-  data.url = document.location.href;
-  console.log(data);
-  chrome.extension.sendMessage(data);
-  localStorage.start_time = '';
+var send_time = function() {
+    var data = {};
+    data.start_time = start_time;
+    data.end_time = new Date().getTime();
+    data.total_milli_seconds = data.end_time - data.start_time;
+    data.url = document.location.href;
+    console.log(data);
+    chrome.extension.sendMessage(data);
 };
 
-if(document.visibilityState == 'visible'){
-    localStorage.start_time = localStorage.start_time || new Date().getTime();
-}
-document.addEventListener("visibilitychange", function(){
-  if(document.hidden){
-    send_time();  
-  }else{
-    if(!localStorage.start_time){
-      localStorage.start_time = new Date().getTime();
+document.addEventListener("visibilitychange", function() {
+
+    if (document.visibilityState == "visible") {
+        start_time = new Date().getTime();
+    } else {
+        send_time();
     }
-  };
+
+
+    /*
+    if (document.hidden) {
+        send_time();
+    } else {
+        if (!localStorage.start_time) {
+            localStorage.start_time = new Date().getTime();
+        }
+    };
+    */
 });
 
-window.onbeforeunload = function(){
-  send_time();
+window.onbeforeunload = function() {
+    send_time();
 }
